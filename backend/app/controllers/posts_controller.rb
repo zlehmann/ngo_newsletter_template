@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class Api::PostsController < ApplicationController
   def index
     @posts = Post.all
     render json: @posts
@@ -25,5 +25,5 @@ class PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:title, :content, :category, :post_img, :keywords)
-  end 
+  end
 end
