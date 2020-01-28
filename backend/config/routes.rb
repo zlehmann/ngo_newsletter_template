@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    get '/447-login', to: 'admins#login'
     resources :posts
     resources :events
   end
